@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17AEA5262298BA93000C842A /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17AEA5252298BA93000C842A /* SnapKit.framework */; };
 		17EB3D452298B413009D90CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EB3D442298B413009D90CE /* AppDelegate.swift */; };
 		17EB3D472298B413009D90CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EB3D462298B413009D90CE /* ViewController.swift */; };
 		17EB3D4A2298B413009D90CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17EB3D482298B413009D90CE /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17AEA5252298BA93000C842A /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		17EB3D412298B413009D90CE /* ImageFormatCatalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageFormatCatalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17EB3D442298B413009D90CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17EB3D462298B413009D90CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17AEA5262298BA93000C842A /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +150,7 @@
 		17EB3D7B2298B6A4009D90CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				17AEA5252298BA93000C842A /* SnapKit.framework */,
 				17EB3D7F2298B6A4009D90CE /* libwebp.framework */,
 				17EB3D7C2298B6A4009D90CE /* SDWebImage.framework */,
 				17EB3D7D2298B6A4009D90CE /* SDWebImageMapKit.framework */,
@@ -536,6 +540,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 74F8874BW5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ImageFormatCatalogTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -557,6 +565,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 74F8874BW5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ImageFormatCatalogTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

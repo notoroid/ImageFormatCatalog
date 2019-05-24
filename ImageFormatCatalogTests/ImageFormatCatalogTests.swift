@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import ImageFormatCatalog
+import SnapKit
 
 class ImageFormatCatalogTests: XCTestCase {
 
@@ -35,6 +36,13 @@ class ImageFormatCatalogTests: XCTestCase {
         wait(for: [expect], timeout: 5.0)
     }
     
+    func test_シンプルテスト() {
+        let view = UIView()
+        view.snp.makeConstraints { (make) in
+            
+        }
+    }
+
     func test_Jpegイメージロード() {
         let expect2 = expectation(description: "Jpegイメージロード")
         viewController.loadWebPImage(.jpeg) { (image, error) in
