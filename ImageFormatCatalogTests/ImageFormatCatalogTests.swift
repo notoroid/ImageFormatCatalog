@@ -11,24 +11,37 @@ import XCTest
 
 class ImageFormatCatalogTests: XCTestCase {
 
+    var window: UIWindow!
+    var viewController: ViewController!
+    
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        window = UIWindow()
+        viewController = ViewController()
+        window.rootViewController = viewController
+        window.makeKeyAndVisible()
+        _ = viewController.view
     }
-
+    
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        window.resignKey()
     }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func test_WebPイメージロード() {
+        let expect = expectation(description: "WebPイメージロード")
+        viewController.loadWebPImage(.jpeg) { (image, error) in
+            XCTAssertNotNil(image)
+            expect.fulfill()
         }
+        wait(for: [expect], timeout: 5.0)
+    }
+    
+    func test_Jpegイメージロード() {
+        let expect2 = expectation(description: "Jpegイメージロード")
+        viewController.loadWebPImage(.jpeg) { (image, error) in
+            XCTAssertNotNil(image)
+            expect2.fulfill()
+        }
+        wait(for: [expect2], timeout: 5.0)
     }
 
 }
