@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ALZ-1P-T54">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="OVE-Or-DPP">
+            <objects>
+                <viewController id="ALZ-1P-T54" customClass="ViewController" customModule="SimpleCatalog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0tZ-Yt-8YI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AWR-HC-n2H">
+                                <rect key="frame" x="0.0" y="190" width="414" height="416"/>
+                                <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="AWR-HC-n2H" secondAttribute="height" multiplier="207:208" id="ezr-Gj-7Kd"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="71" translatesAutoresizingMaskIntoConstraints="NO" id="irI-3s-Ubd">
+                                <rect key="frame" x="71.5" y="619.5" width="271" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sj5-Gy-cZp">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="8M9-6p-N6G"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <state key="normal" title="WebP"/>
+                                        <connections>
+                                            <action selector="onLoadWebP:" destination="ALZ-1P-T54" eventType="touchUpInside" id="4mQ-y1-mSR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zly-VW-YAE">
+                                        <rect key="frame" x="171" y="0.0" width="100" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="15Q-xK-yt8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <state key="normal" title="JPEG"/>
+                                        <connections>
+                                            <action selector="onLoadJpeg:" destination="ALZ-1P-T54" eventType="touchUpInside" id="1dw-cd-93j"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="AWR-HC-n2H" firstAttribute="width" secondItem="0tZ-Yt-8YI" secondAttribute="width" id="EzO-Nb-tW5"/>
+                            <constraint firstItem="irI-3s-Ubd" firstAttribute="top" secondItem="AWR-HC-n2H" secondAttribute="bottom" constant="13.67" id="N95-8i-qS1"/>
+                            <constraint firstItem="irI-3s-Ubd" firstAttribute="centerX" secondItem="0tZ-Yt-8YI" secondAttribute="centerX" id="gix-Ro-pcz"/>
+                            <constraint firstItem="AWR-HC-n2H" firstAttribute="centerX" secondItem="0tZ-Yt-8YI" secondAttribute="centerX" id="kFp-xF-bN0"/>
+                            <constraint firstItem="AWR-HC-n2H" firstAttribute="centerY" secondItem="0tZ-Yt-8YI" secondAttribute="centerY" constant="-50" id="tT6-Fs-nm5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="88v-Iw-Jpp"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="AWR-HC-n2H" id="YF5-2A-TOE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0qK-3M-RH8" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="119.70443349753695"/>
+        </scene>
+    </scenes>
+</document>
